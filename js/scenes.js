@@ -1,0 +1,7 @@
+import {gesture,setSpeech} from './npc.js';
+export class SceneDirector {
+ constructor(data,npcs,world,audio,provider,config){Object.assign(this,{data,npcs,world,audio,provider,config});this.states=data.scenes.map(scene=>({...scene,index:0,next:0,busy:false}));this.lines=new Map(data.lines.map(l=>[l.id,l]));this.active=new Map();}
+ async say(npc,line){const token=Symbol();this.active.set(npc.id,token);const reply=await this.provider.respond({npcId:npc.id,playerText:line.id,history:npc.history.slice(-8)});if(this.active.get(npc.id)!==token)return 0;npc.history.push({text:reply.text});if(npc.history.length>16)npc.history.shift();setSpeech(npc,{...line,text:reply.text},this.config.showText);gesture(npc,line,this.world.targets);return await this.audio.play(npc.root,reply.audioUrl);}
+ tap(npc){const line=this.lines.get(this.data.tap[npc.id]);if(line)this.say(npc,line);}
+ update(t,position){for(const state of this.states){const anchor=this.npcs[state.anchor].root.position;const distance=Math.hypot(anchor.x-position.x,anchor.z-position.z);if(distance>this.config.sceneRadius||state.busy||t<state.next)continue;const line=this.lines.get(state.lines[state.index]);const npc=this.npcs[line.speaker];state.busy=true;this.say(npc,line).then(duration=>{state.index=(state.index+1)%state.lines.length;state.next=performance.now()/1000+Math.max(duration,2.5)+(state.index===0?state.pause:1);}).finally(()=>state.busy=false);}}
+}

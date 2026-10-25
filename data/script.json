@@ -1,0 +1,270 @@
+{
+  "lines": [
+    {
+      "id": "salve",
+      "speaker": "viator",
+      "text": "Salve!",
+      "audio": "audio/salve.mp3",
+      "gesture": "wave",
+      "target": ""
+    },
+    {
+      "id": "quid",
+      "speaker": "viator",
+      "text": "Quid agis?",
+      "audio": "audio/quid.mp3",
+      "gesture": "nod",
+      "target": ""
+    },
+    {
+      "id": "bene",
+      "speaker": "viator",
+      "text": "Bene, gratias.",
+      "audio": "audio/bene.mp3",
+      "gesture": "nod",
+      "target": ""
+    },
+    {
+      "id": "wine_order",
+      "speaker": "hospes",
+      "text": "Vinum, quaeso.",
+      "audio": "audio/wine_order.mp3",
+      "gesture": "point",
+      "target": "vinum"
+    },
+    {
+      "id": "wine_here",
+      "speaker": "caupo",
+      "text": "Ecce vinum.",
+      "audio": "audio/wine_here.mp3",
+      "gesture": "hold",
+      "target": "vinum"
+    },
+    {
+      "id": "wine_price",
+      "speaker": "hospes",
+      "text": "Quanti constat?",
+      "audio": "audio/wine_price.mp3",
+      "gesture": "nod",
+      "target": ""
+    },
+    {
+      "id": "wine_cost",
+      "speaker": "caupo",
+      "text": "Duobus assibus.",
+      "audio": "audio/wine_cost.mp3",
+      "gesture": "nod",
+      "target": ""
+    },
+    {
+      "id": "bread_order",
+      "speaker": "hospes",
+      "text": "Panem quoque, quaeso.",
+      "audio": "audio/bread_order.mp3",
+      "gesture": "point",
+      "target": "panis"
+    },
+    {
+      "id": "bread_here",
+      "speaker": "caupo",
+      "text": "Ecce panis.",
+      "audio": "audio/bread_here.mp3",
+      "gesture": "hold",
+      "target": "panis"
+    },
+    {
+      "id": "tavern_coin",
+      "speaker": "hospes",
+      "text": "Ecce pecunia.",
+      "audio": "audio/tavern_coin.mp3",
+      "gesture": "coin",
+      "target": "caupo"
+    },
+    {
+      "id": "tavern_thanks",
+      "speaker": "caupo",
+      "text": "Gratias tibi.",
+      "audio": "audio/tavern_thanks.mp3",
+      "gesture": "nod",
+      "target": ""
+    },
+    {
+      "id": "apple_price",
+      "speaker": "emptor",
+      "text": "Quanti sunt poma?",
+      "audio": "audio/apple_price.mp3",
+      "gesture": "point",
+      "target": "poma"
+    },
+    {
+      "id": "apple_cost",
+      "speaker": "mercator",
+      "text": "Tribus assibus.",
+      "audio": "audio/apple_cost.mp3",
+      "gesture": "hold",
+      "target": "poma"
+    },
+    {
+      "id": "haggle",
+      "speaker": "emptor",
+      "text": "Nimis! Duobus?",
+      "audio": "audio/haggle.mp3",
+      "gesture": "nod",
+      "target": ""
+    },
+    {
+      "id": "deal",
+      "speaker": "mercator",
+      "text": "Esto, duobus.",
+      "audio": "audio/deal.mp3",
+      "gesture": "nod",
+      "target": ""
+    },
+    {
+      "id": "market_coin",
+      "speaker": "emptor",
+      "text": "Ecce pecunia.",
+      "audio": "audio/market_coin.mp3",
+      "gesture": "coin",
+      "target": "mercator"
+    },
+    {
+      "id": "market_thanks",
+      "speaker": "mercator",
+      "text": "Gratias tibi. Vale!",
+      "audio": "audio/market_thanks.mp3",
+      "gesture": "wave",
+      "target": ""
+    },
+    {
+      "id": "teach_bread_1",
+      "speaker": "caupo",
+      "text": "Hoc est panis.",
+      "audio": "audio/teach_bread_1.mp3",
+      "gesture": "point",
+      "target": "panis"
+    },
+    {
+      "id": "teach_bread_2",
+      "speaker": "caupo",
+      "text": "Hoc est panis.",
+      "audio": "audio/teach_bread_2.mp3",
+      "gesture": "point",
+      "target": "panis"
+    },
+    {
+      "id": "teach_water_1",
+      "speaker": "mercator",
+      "text": "Haec est aqua.",
+      "audio": "audio/teach_water_1.mp3",
+      "gesture": "point",
+      "target": "aqua"
+    },
+    {
+      "id": "teach_water_2",
+      "speaker": "mercator",
+      "text": "Haec est aqua.",
+      "audio": "audio/teach_water_2.mp3",
+      "gesture": "point",
+      "target": "aqua"
+    },
+    {
+      "id": "tap_caupo",
+      "speaker": "caupo",
+      "text": "Salve! Quid vis?",
+      "audio": "audio/tap_caupo.mp3",
+      "gesture": "wave",
+      "target": ""
+    },
+    {
+      "id": "tap_hospes",
+      "speaker": "hospes",
+      "text": "Vinum et panem volo.",
+      "audio": "audio/tap_hospes.mp3",
+      "gesture": "hold",
+      "target": "poculum"
+    },
+    {
+      "id": "tap_mercator",
+      "speaker": "mercator",
+      "text": "Ecce poma!",
+      "audio": "audio/tap_mercator.mp3",
+      "gesture": "point",
+      "target": "poma"
+    },
+    {
+      "id": "tap_emptor",
+      "speaker": "emptor",
+      "text": "Poma emo.",
+      "audio": "audio/tap_emptor.mp3",
+      "gesture": "nod",
+      "target": ""
+    }
+  ],
+  "scenes": [
+    {
+      "id": "salutatio",
+      "anchor": "viator",
+      "lines": [
+        "salve",
+        "quid",
+        "bene"
+      ],
+      "pause": 12
+    },
+    {
+      "id": "taberna",
+      "anchor": "caupo",
+      "lines": [
+        "wine_order",
+        "wine_here",
+        "wine_price",
+        "wine_cost",
+        "bread_order",
+        "bread_here",
+        "tavern_coin",
+        "tavern_thanks",
+        "teach_bread_1",
+        "teach_bread_2"
+      ],
+      "pause": 10
+    },
+    {
+      "id": "macellum",
+      "anchor": "mercator",
+      "lines": [
+        "apple_price",
+        "apple_cost",
+        "haggle",
+        "deal",
+        "market_coin",
+        "market_thanks",
+        "teach_water_1",
+        "teach_water_2"
+      ],
+      "pause": 10
+    }
+  ],
+  "vocab": {
+    "panis": "panis",
+    "vinum": "vinum",
+    "aqua": "aqua",
+    "poma": "poma",
+    "caseus": "caseus",
+    "olivae": "olivae",
+    "ova": "ova",
+    "uvae": "uvae",
+    "pisces": "pisces",
+    "nummus": "nummus",
+    "poculum": "poculum",
+    "amphora": "amphora",
+    "mensa": "mensa"
+  },
+  "tap": {
+    "caupo": "tap_caupo",
+    "hospes": "tap_hospes",
+    "mercator": "tap_mercator",
+    "emptor": "tap_emptor",
+    "viator": "salve"
+  }
+}
